@@ -1,6 +1,11 @@
 ## Functions to find the inverse of a matrix and cache the result
 
-## List of a set of function to handle the caching
+## List of a set of functions to handle the caching
+## eg. a <- makeCacheMatrix(matrix(1:4,2,2))
+## a$get()
+##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -17,6 +22,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 ## Tries to obtain matrix inverse from cache, else calculates and caches result
+## eg. cacheSolve(a)
+##      [,1] [,2]
+## [1,]   -2  1.5
+## [2,]    1 -0.5
+
 
 cacheSolve <- function(x, ...) {
     m <- x$getinverse()
